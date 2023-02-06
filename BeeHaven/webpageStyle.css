@@ -1,0 +1,409 @@
+/* 
+ *	Cascading Style Sheet
+ * 	HTML elements define content, CSS styles define what content looks like
+ *  Sheet is organized from most applicable to least applicable (phrasing)
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    font-family: myFirstFont;
+    font-family: Copperplate Gothic Light; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+    float: right;
+}
+
+nav ul {
+    font-family: myFirstFont;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url(myImages/CGLr.ttf);
+}
+
+nav li {
+    font-family: myFirstFont;
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 10px;
+    margin-right: 10px;
+    
+    position: relative;
+}
+
+nav a {
+    font-family: myFirstFont;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:before{
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: black;
+}
+
+nav a:hover{
+    color: whitesmoke;
+}
+
+.nav-button {
+    font-size: 110%;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.logo {
+    float: left;
+    width: 30%;
+}
+
+/* Main Heading */
+h1 {
+    background-color: rgba(255, 234, 0, 0.776);
+    /* background-color: white; */
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    /* border-bottom: solid black; */
+}
+
+h1::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* Footer for website */
+h3 {
+    /* background-color: moccasin; */
+    background-color: rgba(255, 234, 0, 0.776);
+
+    padding: 5px;
+    /* color: black; */
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    border-top: solid black;
+}
+/* Encapsulates everything below main heading */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 90%;
+
+}
+
+/* Top left box, education
+.education {
+    position: relative;
+    width: 60%;
+    height: 30%;
+    border-right: solid black;
+    border-left: solid black;
+    float: right;
+} */
+/* Top right box, skills, projects */
+.skills {
+    position: relative;
+    width: 60%;
+    height: 30%;
+    /* border-bottom: solid black;
+    border-right: solid black;
+    border-left: solid black; */
+    padding-bottom: 5px;
+    /* right: 100px; */
+    float: right;
+}
+.experience {
+    border-bottom: solid black;
+    border-right: solid black;
+    float: left;
+    /* right: 100px; */
+}
+#bio {
+    position: relative;
+    width: 100%;
+    padding-bottom: 5px;
+    /* right: 100px; */
+    /* float: right; */
+}
+
+figure {
+    width: 20%;
+}
+
+/* For Lists:
+ *  Semi-header, primary, secondary
+ */
+#semi-header {
+    /* margin: 10px; */
+    text-align: center;
+    font-size: 200%;
+    
+}
+.primary {
+    margin-left: 15px;
+    font-size: 110%;
+    list-style: solid circle;
+}
+.secondary {
+    margin-left: 15px;
+    list-style: square;
+}
+/* PHOTOGRID */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.column {
+    flex: 25%;
+    padding: 0 4px;
+}
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+/* BUTTONS */
+.cartButton {
+    outline-style: none;
+}
+
+/* SHOP */
+
+#shop-header {
+    text-align: center;
+    /* background-color: moccasin; */
+    /* background-color: rgba(255, 234, 0, 0.776); */
+}
+
+#cart-header {
+    text-align: center;
+    font-size: 200%;
+    /* background-color: honeydew; */
+    
+}
+
+.shop {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    
+    border-left: solid black;
+    padding-bottom: 5px;
+    /* right: 100px; */
+}
+
+.shop-item {
+    margin: 30px;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 250px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    color: #333;
+}
+
+.shop-items {
+    /* border: solid black; */
+    border-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Cart Styling */
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+    /* background-color: honeydew; */
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    /* background-color: honeydew; */
+}
+
+.cart-row {
+    display: flex;
+    /* background-color: honeydew; */
+}
+
+.cart-item {
+    width: 45%;
+    /* background-color: honeydew; */
+}
+
+.cart-price {
+    /* text-align: center; */
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+    /* background-color: honeydew; */
+}
+
+.cart-quantity {
+    /* text-align: center; */
+    width: 35%;
+    /* background-color: honeydew; */
+}
+
+.cart-item-title {
+    /* text-align: center; */
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+    /* background-color: honeydew; */
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+/* Remove from cart button */
+.remove-button {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.remove-button:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.youngsfarm {
+    font-family: assistant sans-serif;
+    color: #363636;
+}
+
+.youngs-font {
+    font-size: 110%;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.grid-item {
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+}
+
+.curdswhey {
+    font-family: STAMPED;
+}
+
+
+/* PHOTO GALLERY (NOT MY CODE) SOURCE: https://css-tricks.com/css-grid-and-custom-shapes-part-1/ */
+.gallery {
+    --s: 130px; /* control the size */
+    --g: 10px;  /* control the gap */
+    display: grid;
+    margin: calc(var(--s) + var(--g));
+}
+  
+.gallery > img {
+    grid-area: 1/1;
+    width: var(--s);
+    aspect-ratio: 0.866;
+    object-fit: cover;
+    clip-path: polygon(0% 25%,0% 75%,50% 100%,100% 75%,100% 25%,50% 0);
+    transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
+    cursor: pointer;
+    /* filter: grayscale(80%); */
+    transition: .2s linear;
+}
+.gallery > img:hover {
+    /* filter: grayscale(0); */
+    z-index: 1;
+    --_t: 1.2;
+}
+section::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.gallery > img:nth-child(1) {--_x: calc(-100% - var(--g))}
+.gallery > img:nth-child(7) {--_x: calc( 100% + var(--g))}
+
+.gallery > img:nth-child(3),
+.gallery > img:nth-child(4) {--_x: calc(-50% - .5*var(--g))}
+
+.gallery > img:nth-child(5), 
+.gallery > img:nth-child(6) {--_x: calc( 50% + .5*var(--g))}
+
+/* Top row */
+.gallery > img:nth-child(8),
+.gallery > img:nth-child(3),
+.gallery > img:nth-child(5), 
+.gallery > img:nth-child(12){--_y: calc(-75% - .87*var(--g))}
+/* Bottom row */
+.gallery > img:nth-child(4),
+.gallery > img:nth-child(6),
+.gallery > img:nth-child(9),
+.gallery > img:nth-child(11) {--_y: calc( 75% + .87*var(--g))}
+/* top 3rd image */
+.gallery > img:nth-child(9),
+.gallery > img:nth-child(8) {--_x: calc( 149% + 1.72*var(--g));}
+/* middle 3rd image */
+.gallery > img:nth-child(10) {--_x: calc( 204% + 1.72*var(--g));}
+
+/* middle 4th image */
+.gallery > img:nth-child(13) {--_x: calc( 314% + 1.72*var(--g));}
+
+/* middle 5th image */
+.gallery > img:nth-child(14) {--_x: calc( 424% + 1.72*var(--g));}
+
+/* Bottom 4th, top 4th image */
+.gallery > img:nth-child(11),
+.gallery > img:nth-child(12) {--_x: calc( 259% + 1.72*var(--g));}
+
